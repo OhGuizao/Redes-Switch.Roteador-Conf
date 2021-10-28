@@ -1,0 +1,55 @@
+---------     CONFIGURAÇÃO DO ROTEADOR:
+(Após entrar no rommom(desligar o roteador e no teclado rodar o comando CRTL+Pause Break))
+>confreg 0x2142  -> pede a configuração feita da memoria
+>confreg 0x2102  -> tras a configuração ja feita para o disco
+>reset
+
+
+reiniado já...
+
+en
+conf t
+hostname R-RJ
+line console 0
+password cisco
+login
+exit
+line console vty 0 4
+password ccna
+login
+exit
+enable secret TI0220
+banner motd #
+ACESSO RESTRITO AO ROTEADOR DE RJ!!!  #
+end 
+wr
+
+
+
+
+
+
+
+
+
+---------------           CONFIGURAÇÃO SW:
+
+
+en
+conf t
+hostname SW-RJ-01
+line console 0
+password cisco
+login
+exit
+line console vty 0 4
+password ccna
+login
+exit
+enable secret TI0220
+banner motd #
+ACESSO RESTRITO AO SWITCH DE RJ!!!  #
+end 
+wr
+
+
